@@ -1,0 +1,7 @@
+.idea
+*.phar
+scratch*
+.DS_Store
+vendor/*
+wp-content/*
+trunk/README.txt

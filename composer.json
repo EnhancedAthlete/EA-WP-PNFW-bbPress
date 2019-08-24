@@ -1,0 +1,35 @@
+{
+    "repositories": [
+        {
+            "url": "https://github.com/WordPress/wordpress-develop",
+            "type": "git"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "ntwb/bbPress",
+                "version": "1.0",
+                "source": {
+                    "url": "https://github.com/ntwb/bbPress",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "require-dev": {
+        "wordpress/wordpress": "dev-master",
+        "10up/wp_mock": "0.4.2",
+        "dealerdirect/phpcodesniffer-composer-installer": "*",
+        "wp-coding-standards/wpcs": "*",
+        "phpunit/phpcov": "^5.0",
+        "ntwb/bbpress":"*"
+    },
+    "license": "GPL-2.0+-or-later",
+    "authors": [
+        {
+            "name": "Brian Henry",
+            "email": "BrianHenryIE@gmail.com"
+        }
+    ]
+}
