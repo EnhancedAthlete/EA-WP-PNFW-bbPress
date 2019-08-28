@@ -30,7 +30,7 @@ The message title and the user_info array can be modified with filters.
 add_filter( 'bbp_post_notify_subscribers_pnfw_message', 'my_pnfw_message', 10, 4);
 
 /**
- * @param string		$message		The title of the push notification.
+ * @param string	$message		The title of the push notification.
  * @param int 		$reply_id		The reply id.
  * @param int 		$topic_id		The topic the reply is to.
  * @param int 		$user_id		The user the message is being sent to.

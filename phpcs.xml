@@ -16,6 +16,7 @@
 
     <exclude-pattern>*/node_modules/*</exclude-pattern>
     <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/scratch/*</exclude-pattern>
     <exclude-pattern>*/trunk/lib/*</exclude-pattern>
     <exclude-pattern>*/wordpress/*</exclude-pattern>
     <exclude-pattern>*/wp-content/*</exclude-pattern>

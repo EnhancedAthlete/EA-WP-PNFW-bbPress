@@ -43,8 +43,6 @@ function _manually_load_plugin() {
 	$plugins_dir = $project_root_dir . '/wp-content/plugins';
 	require_once  $plugins_dir  . '/bbpress/bbpress.php';
 
-//	require_once  $project_root_dir . '/vendor/ntwb/bbPress/src/bbpress.php';
-
 	// Assumes the plugin's directory name is the same as its filename.
 	$plugin_name = basename( $project_root_dir );
 
