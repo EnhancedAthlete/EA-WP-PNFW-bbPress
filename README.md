@@ -64,6 +64,17 @@ function my_pnfw_user_info( $user_info, $reply_id, $topic_id, $user_id ) {
 }
 ```
 
+## Related
+
+By default the "Notify me of follow-up replies via email" option is not checked. The bbPress filter `bbp_get_form_topic_subscribed` can be used to set this:
+
+```
+add_filter( 'bbp_get_form_topic_subscribed', 'bbp_auto_check_subscribe', 10, 2 );
+function bbp_auto_check_subscribe( $checked, $topic_subscribed  ) {
+    return checked( true, true, false );
+}
+```
+
 ## Develop
 
 To install [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer), the  [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards), [WP_Mock](https://github.com/10up/wp_mock) (and its [PHP Unit 7](https://github.com/sebastianbergmann/phpunit) dependency) and wordpress-develop testing environment run:
@@ -161,7 +172,6 @@ Code coverage will be output in the console, and as HTML under `/tests/reports/h
 ## TODO
 
 * Logging
-* Change "Notify me of follow-up replies via email" to "Notify me of follow-up replies"
 
 ## Acknowledgements
 
