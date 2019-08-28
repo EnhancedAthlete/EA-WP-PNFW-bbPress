@@ -30,7 +30,7 @@ The message title and the user_info array can be modified with filters.
 add_filter( 'bbp_post_notify_subscribers_pnfw_message', 'my_pnfw_message', 10, 4);
 
 /**
- * @param string		$message		The title of the push notification.
+ * @param string	$message		The title of the push notification.
  * @param int 		$reply_id		The reply id.
  * @param int 		$topic_id		The topic the reply is to.
  * @param int 		$user_id		The user the message is being sent to.
@@ -64,6 +64,17 @@ function my_pnfw_user_info( $user_info, $reply_id, $topic_id, $user_id ) {
 }
 ```
 
+## Related
+
+By default the "Notify me of follow-up replies via email" option is not checked. The bbPress filter `bbp_get_form_topic_subscribed` can be used to set this:
+
+```
+add_filter( 'bbp_get_form_topic_subscribed', 'bbp_auto_check_subscribe', 10, 2 );
+function bbp_auto_check_subscribe( $checked, $topic_subscribed  ) {
+    return checked( true, true, false );
+}
+```
+
 ## Develop
 
 To install [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer), the  [WordPress Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards), [WP_Mock](https://github.com/10up/wp_mock) (and its [PHP Unit 7](https://github.com/sebastianbergmann/phpunit) dependency) and wordpress-develop testing environment run:
@@ -76,13 +87,19 @@ composer install
 
 A symlink to the Composer installed bbPress in `vendor` needs to be created in `wp-content/plugins` (where [WordPress Packagist](https://wpackagist.org/) plugins are conventionally installed).
 
-`ln -s vendor/ntwb/bbpress/src wp-content/plugins`
+```
+ln -s ../../vendor/bbpress/bbpress/src ./wp-content/plugins/
+```
 
-`mv wp-content/plugins/src wp-content/plugins/bbpress`
+```
+mv wp-content/plugins/src wp-content/plugins/bbpress
+```
 
 I also like to add WordPress itself in the project root directory.
 
-`ln -s vendor/wordpress/wordpress/ .`
+```
+ln -s vendor/wordpress/wordpress/ .
+```
 
 ### WordPress Coding Standards
 
@@ -155,7 +172,6 @@ Code coverage will be output in the console, and as HTML under `/tests/reports/h
 ## TODO
 
 * Logging
-* Change "Notify me of follow-up replies via email" to "Notify me of follow-up replies"
 
 ## Acknowledgements
 
