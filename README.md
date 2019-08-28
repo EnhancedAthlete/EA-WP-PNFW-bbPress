@@ -76,13 +76,19 @@ composer install
 
 A symlink to the Composer installed bbPress in `vendor` needs to be created in `wp-content/plugins` (where [WordPress Packagist](https://wpackagist.org/) plugins are conventionally installed).
 
-`ln -s vendor/ntwb/bbpress/src wp-content/plugins`
+```
+ln -s ../../vendor/bbpress/bbpress/src ./wp-content/plugins/
+```
 
-`mv wp-content/plugins/src wp-content/plugins/bbpress`
+```
+mv wp-content/plugins/src wp-content/plugins/bbpress
+```
 
 I also like to add WordPress itself in the project root directory.
 
-`ln -s vendor/wordpress/wordpress/ .`
+```
+ln -s vendor/wordpress/wordpress/ .
+```
 
 ### WordPress Coding Standards
 

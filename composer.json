@@ -7,10 +7,10 @@
         {
             "type": "package",
             "package": {
-                "name": "ntwb/bbPress",
+                "name": "bbpress/bbpress",
                 "version": "1.0",
                 "source": {
-                    "url": "https://github.com/ntwb/bbPress",
+                    "url": "git://bbpress.git.wordpress.org/",
                     "type": "git",
                     "reference": "master"
                 }
@@ -23,7 +23,7 @@
         "dealerdirect/phpcodesniffer-composer-installer": "*",
         "wp-coding-standards/wpcs": "*",
         "phpunit/phpcov": "^5.0",
-        "ntwb/bbpress":"*"
+        "bbpress/bbpress":"*"
     },
     "license": "GPL-2.0+-or-later",
     "authors": [
@@ -31,5 +31,8 @@
             "name": "Brian Henry",
             "email": "BrianHenryIE@gmail.com"
         }
-    ]
+    ],
+    "config": {
+        "secure-http": false
+    }
 }
